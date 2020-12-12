@@ -1,7 +1,7 @@
 {
   "root": true,
   "env": {
-    "es2020": true,
+    "es2021": true,
     "browser": true,
     "jest": true
   },
@@ -20,7 +20,6 @@
     "arrow-body-style": ["error", "as-needed"],
     "default-case-last": "error",
     "default-param-last": ["error"],
-    "func-names": "off",
     "no-constant-condition": "error",
     "no-useless-call": "error",
     "prefer-exponentiation-operator": "error",
@@ -58,12 +57,14 @@
         "reservedFirst": true
       }
     ],
+    "react/jsx-uses-react": "off",
     "react/no-adjacent-inline-elements": "error",
     "react/no-direct-mutation-state": "error",
     "react/no-multi-comp": "error",
     "react/prop-types": [
       "error",
       { "skipUndeclared": true }
-    ]
+    ],
+    "react/react-in-jsx-scope": "off"
   }
 }

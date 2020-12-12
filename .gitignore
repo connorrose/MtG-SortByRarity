@@ -4,5 +4,7 @@ node_modules
 # system files
 .DS_Store
 
-# dist
+# Parcel
 dist/
+.parcel-cache/
+.cache/
