@@ -11,7 +11,7 @@ const basicLands = [];
 const unsorted = [];
 
 const convertColorsToClass = (rawColors) => {
-  if (rawColors == null) return 'colorless';
+  if (!rawColors) return 'colorless';
   if (rawColors.length > 1) return 'multi';
 
   let colorClass = '';
@@ -50,6 +50,7 @@ const getRarityList = (rarity) => {
 mainboard.forEach(({ card, count }) => {
   // eslint-disable-next-line camelcase
   const { name, type, converted_cost, rarity, colors } = card;
+  if (name === 'Verdant Catacombs') console.log({ colors });
   const rarityList = getRarityList(rarity);
   const processedCard = {
     name,
