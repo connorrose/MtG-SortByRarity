@@ -1,3 +1,69 @@
-.title {
-  color: hotpink;
+body {
+  padding: 2em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0 1em;
+}
+
+ul li {
+  display: block;
+  margin: 0.5em;
+}
+
+/* https://www.w3schools.com/howto/howto_css_bullet_color.asp */
+ul li::before {
+  content: "\2022";
+  font-weight: bold;
+  font-size: 1.25em;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+li.white::before {
+  color: lemonchiffon;
+}
+li.blue::before {
+  color: mediumblue;
+}
+li.black::before {
+  color: black;
+}
+li.red::before {
+  color: firebrick;
+}
+li.green::before {
+  color: green;
+}
+li.colorless::before {
+  color: lightgrey;
+}
+li.multi::before {
+  color: violet;
+}
+
+li.strike {
+  text-decoration: line-through;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+#lists-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.rarity-container {
+  margin: 1rem;
+  flex: 1 1 content;
 }

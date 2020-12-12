@@ -25,6 +25,7 @@
   "scripts": {
     "build": "parcel build ./src/index.html",
     "start": "parcel serve ./src/index.html",
+    "clear-cache": "rm -rf .parcel-cache/ dist/",
     "test": "jest --verbose --coverage"
   },
   "browserslist": [
