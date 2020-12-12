@@ -63,6 +63,24 @@ mainboard.forEach(({ card, count }) => {
   }
 });
 
+const colorOrder = {
+  white: 0,
+  blue: 1,
+  black: 2,
+  red: 3,
+  green: 4,
+  colorless: 5,
+  multi: 6,
+};
+
+const sortListByColor = (a, b) => colorOrder[a.colorClass] - colorOrder[b.colorClass];
+
+mythics.sort(sortListByColor);
+rares.sort(sortListByColor);
+uncommons.sort(sortListByColor);
+commons.sort(sortListByColor);
+basicLands.sort(sortListByColor);
+
 export default {
   deckTitle,
   mythics,
