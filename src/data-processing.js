@@ -8,7 +8,7 @@ const rares = [];
 const uncommons = [];
 const commons = [];
 const basicLands = [];
-const unsorted = [];
+const special = [];
 
 const convertColorsToClass = (rawColors) => {
   if (!rawColors) return 'colorless';
@@ -44,13 +44,12 @@ const getRarityList = (rarity) => {
   if (/uncommon/i.test(rarity)) return uncommons;
   if (/common/i.test(rarity)) return commons;
   if (/basic/i.test(rarity)) return basicLands;
-  return unsorted;
+  return special;
 };
 
 mainboard.forEach(({ card, count }) => {
   // eslint-disable-next-line camelcase
   const { name, type, converted_cost, rarity, colors } = card;
-  if (name === 'Verdant Catacombs') console.log({ colors });
   const rarityList = getRarityList(rarity);
   const processedCard = {
     name,
@@ -81,6 +80,7 @@ rares.sort(sortListByColor);
 uncommons.sort(sortListByColor);
 commons.sort(sortListByColor);
 basicLands.sort(sortListByColor);
+special.sort(sortListByColor);
 
 export default {
   deckTitle,
@@ -89,4 +89,5 @@ export default {
   uncommons,
   commons,
   basicLands,
+  special,
 };

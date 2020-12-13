@@ -1,15 +1,7 @@
 import { CardList } from './CardList';
 import deckData from '../data-processing';
 
-const { mythics, rares, uncommons, commons, basicLands } = deckData;
-
-console.log({
-  mythics,
-  rares,
-  uncommons,
-  commons,
-  basicLands,
-});
+const { mythics, rares, uncommons, commons, basicLands, special } = deckData;
 
 const handleClick = (e) => {
   e.target.parentNode.classList.toggle('strike');
@@ -24,6 +16,7 @@ const App = () => (
       <CardList cards={uncommons} title="Uncommon" />
       <CardList cards={commons} title="Common" />
       <CardList cards={basicLands} title="Basic Lands" />
+      <CardList cards={special} title="Special" />
     </div>
   </>
 );
