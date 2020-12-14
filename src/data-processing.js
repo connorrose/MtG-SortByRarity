@@ -1,7 +1,7 @@
-import rawWindgrace from '../Decklists/Windgrace.json';
+import rawDecklist from '../Decklists/Omnath.json';
 
-const deckTitle = rawWindgrace.info.name;
-const { mainboard } = rawWindgrace.list;
+const deckTitle = rawDecklist.info.name;
+const { mainboard } = rawDecklist.list;
 
 const mythics = [];
 const rares = [];
